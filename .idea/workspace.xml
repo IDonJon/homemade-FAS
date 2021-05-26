@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e153fe17-58ae-45d3-9cc6-90f017bee955" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/communication-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/communication-service/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/communication-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/communication-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/communication-service/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/communication-service/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/communication-service/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/communication-service/src/main/java/pe/edu/upc/entities/Chat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/communication-service/src/main/java/pe/edu/upc/entities/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/communication-service/src/main/java/pe/edu/upc/entities/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/communication-service/src/main/java/pe/edu/upc/entities/Publication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/communication-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/communication-service/src/test/java/pe/edu/upc/BusinessServiceApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sxhaPVBlB7GVVKGIEpYPB8gZNE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/communication-service/main" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\elmoe\Documents\GitHub\homemade-FAS\communication-service\main" />
+      <recent name="C:\Users\elmoe\Documents\GitHub\homemade-FAS\communication-service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\elmoe\Documents\GitHub\homemade-FAS\communication-service\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.acme.homemade.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e153fe17-58ae-45d3-9cc6-90f017bee955" name="Default Changelist" comment="" />
+      <created>1621820216283</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621820216283</updated>
+      <workItem from="1621820219652" duration="569000" />
+      <workItem from="1621827378300" duration="6052000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
