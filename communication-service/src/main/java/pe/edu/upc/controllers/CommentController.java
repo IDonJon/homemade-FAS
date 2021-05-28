@@ -47,14 +47,7 @@ public class CommentController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
-        /*
-        if (result.hasErrors()){
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, this.formatMessage(result));
-        }
-        Comment commentCreate =  commentService.save(comment);
-        return ResponseEntity.status(HttpStatus.CREATED).body(commentCreate);
 
-         */
     }
 
     @PutMapping(value = "/{id}")

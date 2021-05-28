@@ -48,16 +48,6 @@ public class PublicationController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
-
-
-        /*
-        if (result.hasErrors()){
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, this.formatMessage(result));
-        }
-        Publication publicationCreate =  publicationService.save(publication);
-        return ResponseEntity.status(HttpStatus.CREATED).body(publicationCreate);
-
-         */
     }
 
     @PutMapping(value = "/{id}")
@@ -76,15 +66,6 @@ public class PublicationController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
-        /*
-        publication.setId(id);
-        Publication publicationDB =  publicationService.update(publication);
-        if (productDB == null){
-            return ResponseEntity.notFound().build();
-        }
-        return ResponseEntity.ok(publicationDB);
-
-         */
     }
 
     @DeleteMapping(value = "/{id}")
@@ -102,15 +83,6 @@ public class PublicationController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
-
-        /*
-        Publication publicationDelete = publicationService.deleteById(id);
-        if (publicationDelete == null){
-            return ResponseEntity.notFound().build();
-        }
-        return ResponseEntity.ok(publicationDelete);
-
-         */
     }
 
 

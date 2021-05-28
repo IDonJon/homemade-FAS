@@ -44,14 +44,6 @@ public class MessageController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
-
-        /*
-        if (result.hasErrors()){
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, this.formatMessage(result));
-        }
-        Product messageCreate =  messageService.save(publication);
-        return ResponseEntity.status(HttpStatus.CREATED).body(messageCreate);
-        */
     }
 
     @DeleteMapping(value = "/{id}")
