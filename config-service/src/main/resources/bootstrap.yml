@@ -6,11 +6,10 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/upc-is/fas-spring-micro-ms.git
-          searchPaths: config-data
+          uri: https://github.com/IDonJon/homemade-FAS.git
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}
-          default-label: "master"
+          default-label: "development"
   security:
     user:
       name: root
