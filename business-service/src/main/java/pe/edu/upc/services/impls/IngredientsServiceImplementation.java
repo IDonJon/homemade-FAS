@@ -1,10 +1,12 @@
 package pe.edu.upc.services.impls;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pe.edu.upc.entities.Ingredients;
 import pe.edu.upc.entities.Recipe;
+import pe.edu.upc.exception.ResourceNotFoundException;
 import pe.edu.upc.repositories.IngredientsRepository;
 import pe.edu.upc.services.IngredientsService;
 
@@ -50,4 +52,10 @@ public class IngredientsServiceImplementation implements IngredientsService {
     public Optional<Ingredients> findbyName(String name) throws Exception {
         return ingredientsRepository.findByName(name);
     }
+
+    @Override
+    public Ingredients getIngredientsById(Long ingredientId) {
+        return ingredientsRepository.findById(ingredientId).orElseThrow(() -> new ResourceNotFoundException("Ingredient", "Id", ingredientId));
+    }
+
 }

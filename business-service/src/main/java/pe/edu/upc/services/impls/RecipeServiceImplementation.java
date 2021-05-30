@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pe.edu.upc.entities.Recipe;
+import pe.edu.upc.exception.ResourceNotFoundException;
 import pe.edu.upc.repositories.RecipeRepository;
 import pe.edu.upc.services.RecipeService;
 
@@ -49,5 +50,10 @@ public class RecipeServiceImplementation implements RecipeService {
     @Override
     public Optional<Recipe> findbyTitle(String title) throws Exception {
         return recipeRepository.findByTitle(title);
+    }
+
+    @Override
+    public Recipe getRecipeById(Long recipeId) {
+        return recipeRepository.findById(recipeId).orElseThrow(()->new ResourceNotFoundException("Recipe","Id",recipeId));
     }
 }
