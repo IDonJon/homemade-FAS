@@ -1,3 +1,4 @@
+
 spring:
   application:
     name: business-service
@@ -10,3 +11,7 @@ spring:
     admin:
       client:
         url: http://localhost:8086
+server:
+  port: 8095
+  servlet:
+    context-path: /api/v1
