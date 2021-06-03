@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e153fe17-58ae-45d3-9cc6-90f017bee955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/communication-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communication-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communication-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communication-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communication-service/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communication-service/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communication-service/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communication-service/src/main/java/pe/edu/upc/entities/Chat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communication-service/src/main/java/pe/edu/upc/entities/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communication-service/src/main/java/pe/edu/upc/entities/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communication-service/src/main/java/pe/edu/upc/entities/Publication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communication-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communication-service/src/test/java/pe/edu/upc/BusinessServiceApplicationTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="e153fe17-58ae-45d3-9cc6-90f017bee955" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +36,7 @@
       <recent name="C:\Users\elmoe\Documents\GitHub\homemade-FAS\communication-service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Josmar\Documents\GitHub\homemade-FAS\communication-service\src\main\java\pe\edu\upc" />
       <recent name="C:\Users\elmoe\Documents\GitHub\homemade-FAS\communication-service\src" />
     </key>
   </component>
@@ -72,6 +59,7 @@
       <updated>1621820216283</updated>
       <workItem from="1621820219652" duration="569000" />
       <workItem from="1621827378300" duration="6052000" />
+      <workItem from="1622763424072" duration="369000" />
     </task>
     <servers />
   </component>
