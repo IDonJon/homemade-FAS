@@ -1,10 +1,10 @@
-package pe.edu.upc.registry;
+package pe.edu.upc.admin;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RegistryServiceApplicationTests {
+class AdminApplicationTests {
 
     @Test
     void contextLoads() {

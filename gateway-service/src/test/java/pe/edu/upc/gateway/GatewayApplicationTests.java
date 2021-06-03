@@ -1,10 +1,10 @@
-package pe.edu.upc.registry;
+package pe.edu.upc.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RegistryServiceApplicationTests {
+class GatewayApplicationTests {
 
     @Test
     void contextLoads() {
