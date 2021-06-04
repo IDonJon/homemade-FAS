@@ -1,6 +1,5 @@
 package pe.edu.upc.controllers;
 
-import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,7 +14,6 @@ import javax.validation.Valid;
 import java.util.Optional;
 
 @RestController
-@Api
 @RequestMapping("/menu")
 public class MenuController {
     @Autowired
