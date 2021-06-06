@@ -16,4 +16,8 @@ spring:
         - id: business-service
           uri: lb://business-service
           predicates:
-            - Path=/ingredients/**
+            - Path=/businesses/**
+        - id: communication-service
+          uri: lb://communication-service
+          predicates:
+            - Path=/communications/**
