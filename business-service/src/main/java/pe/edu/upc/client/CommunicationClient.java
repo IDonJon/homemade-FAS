@@ -6,7 +6,6 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import pe.edu.upc.models.Comment;
 
-import javax.xml.ws.Response;
 
 @FeignClient(name = "communication-service", fallback = CommunicationHystrixFallbackFactory.class)
 public interface CommunicationClient {
