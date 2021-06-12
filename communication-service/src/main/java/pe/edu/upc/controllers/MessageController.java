@@ -49,6 +49,21 @@ public class MessageController {
 
     }
 
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<Message> update(@PathVariable("id") Long id, @RequestBody Message message) {
+        try {
+            Optional<Message> optionalMessage = messageService.findById(id);
+            if (optionalMessage.isPresent()) {
+                Message messageCreate = messageService.save(message);
+                return ResponseEntity.status(HttpStatus.OK).body(messageCreate);
+            } else {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<Message> deleteById(@PathVariable("id") Long id){
 

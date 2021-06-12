@@ -29,11 +29,11 @@ public class SwaggerConfig {
 
     private ApiInfo getApiInfo() {
         return new ApiInfo(
-                "GeekShirt Order Service API",
+                "Business Service API",
                 "This API provides all methods required for order management",
                 "1.0",
                 "TERMS OF SERVICE URL",
-                new Contact("HampCode","https://github.com/gitHAMP","devacademyweb@gmail.com"),
+                new Contact("MicroServices","https://github.com/IDonJon/homemade-FAS","homemade@gmail.com"),
                 "LICENSE",
                 "LICENSE URL",
                 Collections.emptyList()

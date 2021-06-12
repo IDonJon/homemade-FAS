@@ -21,3 +21,7 @@ spring:
           uri: lb://communication-service
           predicates:
             - Path=/communications/**
+	- id: security-service
+	  uri: lb://security-service
+	  predicates:
+	    - Path=/securities/**

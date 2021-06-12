@@ -1,4 +1,4 @@
-package pe.edu.upc.config;
+package pe.edu.upc.security.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,7 +29,7 @@ public class SwaggerConfig {
 
     private ApiInfo getApiInfo() {
         return new ApiInfo(
-                "Communication Service API",
+                "Security Service API",
                 "This API provides all methods required for order management",
                 "1.0",
                 "TERMS OF SERVICE URL",
