@@ -17,7 +17,7 @@ import java.util.Optional;
 
 @RestController
 @Api
-@RequestMapping("/homies")
+@RequestMapping("/chefs")
 public class ChefController {
     @Autowired
     private ChefService chefService;

@@ -15,6 +15,6 @@ public class Payment {
     private Long Id;
     @Column(name = "description", length = 200)
     private String description;
-    @Column(name = "dateOfPayment", nullable = false)
+    @Column(name = "dateOfPayment")
     private Date date;
 }
