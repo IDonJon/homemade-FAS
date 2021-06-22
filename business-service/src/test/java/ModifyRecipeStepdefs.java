@@ -15,8 +15,9 @@ public class ModifyRecipeStepdefs {
     HttpClient _client;
     HttpRequest _request;
     String _api ;
-    @Given("I perform PUT operation for {string}")
-    public void iPerformPUTOperationFor(String arg0) {
+
+    @Given("I set PUT recipe service api for {string}")
+    public void iSetPUTRecipeServiceApiFor(String arg0) {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;
         _api = arg0;
@@ -31,8 +32,10 @@ public class ModifyRecipeStepdefs {
                 .build();
         _request = request;
     }
-    @Then("I get a {int} status")
-    public void iGetAStatus(int arg0) throws IOException, InterruptedException{
+
+
+    @Then("I get a {int} status from modify recipe service")
+    public void iGetAStatusFromModifyRecipeService(int arg0) throws IOException, InterruptedException {
         HttpResponse<String> response = _client.send(_request, HttpResponse.BodyHandlers.ofString());
         assertNotNull(response);
     }

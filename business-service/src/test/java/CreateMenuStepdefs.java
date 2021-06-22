@@ -1,6 +1,7 @@
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 import java.io.IOException;
 import java.net.URI;
@@ -17,13 +18,15 @@ public class CreateMenuStepdefs {
     HttpClient _client;
     HttpRequest _request;
     String _api ;
-    @Given("I perform POST operation for {string}")
-    public void iPerformPOSTOperationFor(String arg0) {
+
+    @Given("I set POST menu service api for {string}")
+    public void iSetPOSTMenuServiceApiFor(String arg0) {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;
         _api = arg0;
     }
-    @And("I perform POST menu")
+
+    @When("I perform POST menu")
     public void iPerformPOSTMenu()
     {
         HttpRequest request = HttpRequest.newBuilder()
@@ -33,10 +36,12 @@ public class CreateMenuStepdefs {
                 .build();
         _request = request;
     }
-    @Then("I get a {int} status")
-    public void iGetAStatus(int arg0) throws IOException, InterruptedException {
+
+    @Then("I get a {int} status from menu service")
+    public void iGetAStatusFromMenuService(int arg0) throws IOException, InterruptedException {
         HttpResponse<String> response = _client.send(_request, HttpResponse.BodyHandlers.ofString());
         assertNotNull(response);
     }
+
 
 }

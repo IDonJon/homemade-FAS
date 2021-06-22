@@ -1,6 +1,6 @@
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 import java.io.IOException;
 import java.net.URI;
@@ -11,18 +11,21 @@ import java.net.http.HttpResponse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class DeleteRecipeStepdefs {
-    String POSTS_API_URL = "https://jsonplaceholder.typicode.com/posts";
+    String POSTS_API_URL = "https://homemade-evo.herokuapp.com/api";
     HttpClient _client;
     HttpRequest _request;
+    String _api ;
 
-    @Given("I perform Delete operation for")
-    public void iPerformDeleteOperationFor() {
+    @Given("I set DELETE recipe service api for {string}")
+
+    public void iSetDELETERecipeServiceApiFor(String arg0) {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;
+        _api = arg0;
     }
 
-    @And("I perform Delete for the recipe number {string}")
-    public void iPerformDeleteForTheRecipeNumber(String arg0) {
+    @When("I perform DELETE operation for the recipe number {string}")
+    public void iPerformDELETEOperationForTheRecipeNumber(String arg0) {
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
                 .header("accept", "application/json")
@@ -31,8 +34,8 @@ public class DeleteRecipeStepdefs {
         _request = request;
     }
 
-    @Then("I get a {int} status")
-    public void iGetAStatus(int arg0) throws IOException, InterruptedException {
+    @Then("I get a {int} status from delete recipe service")
+    public void iGetAStatusFromDeleteRecipeService(int arg0) throws IOException, InterruptedException {
         HttpResponse<String> response = _client.send(_request, HttpResponse.BodyHandlers.ofString());
         assertNotNull(response);
     }

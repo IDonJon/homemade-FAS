@@ -1,7 +1,8 @@
+
 Feature:
   Verify different Delete operations using REST-assured
 
-  Scenario: Verify one author of the delete
-    Given I perform Delete operation for
-    And I perform Delete for the recipe number "4"
-    Then  I get a 200 status
+  Scenario: Delete a Recipe
+    Given I set DELETE recipe service api for "/recipes"
+    When I perform DELETE operation for the recipe number "4"
+    Then  I get a 200 status from delete recipe service

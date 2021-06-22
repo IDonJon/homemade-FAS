@@ -15,12 +15,14 @@ public class ModifyMenuStepdefs {
     HttpClient _client;
     HttpRequest _request;
     String _api ;
-    @Given("I perform PUT operation for {string}")
-    public void iPerformPUTOperationFor(String arg0) {
+
+    @Given("I set PUT menu service api for {string}")
+    public void iSetPUTMenuServiceApiFor(String arg0) {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;
         _api = arg0;
     }
+
     @And("I perform PUT for the menu number {string}")
     public void iPerformPUTForTheMenuNumber(String arg0) {
         HttpRequest request = HttpRequest.newBuilder()
@@ -30,8 +32,9 @@ public class ModifyMenuStepdefs {
                 .build();
         _request = request;
     }
-    @Then("I get a {int} status")
-    public void iGetAStatus(int arg0) throws IOException, InterruptedException {
+
+    @Then("I get a {int} status from modify menu service")
+    public void iGetAStatusFromModifyMenuService(int arg0) throws IOException, InterruptedException {
         HttpResponse<String> response = _client.send(_request, HttpResponse.BodyHandlers.ofString());
         assertNotNull(response);
     }

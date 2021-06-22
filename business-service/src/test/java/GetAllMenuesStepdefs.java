@@ -1,6 +1,7 @@
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 import java.io.IOException;
 import java.net.URI;
@@ -17,16 +18,15 @@ public class GetAllMenuesStepdefs {
     HttpRequest _request;
     String _api ;
 
-
-    @Given("I perform GET operation for the {string}")
-    public void iPerformGETOperationForThe(String arg0) {
+    @Given("I get all menus with GET operation for the {string}")
+    public void iGetAllMenusWithGETOperationForThe(String arg0) {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;
         _api = arg0;
-
     }
 
-    @And("I perform GET all menus")
+
+    @When("I perform GET all menus")
     public void iPerformGETAllMenus() {
         HttpRequest request = HttpRequest.newBuilder()
                 .DELETE()
@@ -41,4 +41,6 @@ public class GetAllMenuesStepdefs {
         HttpResponse<String> response = _client.send(_request, HttpResponse.BodyHandlers.ofString());
         assertNotNull(response);
     }
+
+
 }
