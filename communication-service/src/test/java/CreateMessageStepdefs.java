@@ -17,7 +17,7 @@ public class CreateMessageStepdefs {
     HttpRequest _request;
     String _api ;
 
-    @Given("I perform POST operation for {string}")
+    @Given("I set POST message service api for {string}")
     public void iSetPOSTMessageServiceApiFor(String arg0) {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;
@@ -40,6 +40,7 @@ public class CreateMessageStepdefs {
         HttpResponse<String> response = _client.send(_request, HttpResponse.BodyHandlers.ofString());
         assertNotNull(response);
     }
+
 
 
 }
