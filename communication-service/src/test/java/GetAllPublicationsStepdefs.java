@@ -12,13 +12,13 @@ import java.net.http.HttpResponse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class GetAllMenuesStepdefs {
+public class GetAllPublicationsStepdefs {
     String POSTS_API_URL = "https://homemade-evo.herokuapp.com/api";
     HttpClient _client;
     HttpRequest _request;
     String _api ;
 
-    @Given("I get all menus with GET operation for the {string}")
+    @Given("I perform GET operation for the {string}")
     public void iGetAllMenusWithGETOperationForThe(String arg0) {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;
@@ -26,17 +26,17 @@ public class GetAllMenuesStepdefs {
     }
 
 
-    @When("I perform GET all menus")
+    @When("I perform GET all publications")
     public void iPerformGETAllMenus() {
         HttpRequest request = HttpRequest.newBuilder()
-                .DELETE()
+                .GET()
                 .header("accept", "application/json")
                 .uri(URI.create(POSTS_API_URL + _api))
                 .build();
         _request = request;
     }
 
-    @Then("I get {string} menus as a result")
+    @Then("I get {string} publications as a result")
     public void iGetMenusAsAResult(String arg0) throws IOException, InterruptedException {
         HttpResponse<String> response = _client.send(_request, HttpResponse.BodyHandlers.ofString());
         assertNotNull(response);

@@ -11,13 +11,13 @@ import java.net.http.HttpResponse;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class CreateMenuStepdefs {
+public class CreatePublicationStepdefs {
     String POSTS_API_URL = "https://homemade-evo.herokuapp.com/api";
     HttpClient _client;
     HttpRequest _request;
     String _api ;
 
-    @Given("I set POST menu service api for {string}")
+    @Given("I perform POST operation for  {string}")
     public void iSetPOSTMenuServiceApiFor(String arg0) {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;

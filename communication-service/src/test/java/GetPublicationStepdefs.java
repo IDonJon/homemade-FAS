@@ -10,17 +10,17 @@ import java.net.http.HttpResponse;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class GetRecipeStepdefs {
+public class GetPublicationStepdefs {
     String POSTS_API_URL = "https://jsonplaceholder.typicode.com/posts";
     HttpClient _client;
     HttpRequest _request;
-    @Given("I set GET recipe service api endpoint")
+    @Given("I perform GET operation for {string}")
     public void iSetGETRecipeServiceApiEndpoint() {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;
     }
 
-    @When("I get a recipe by performing GET operation for the recipe number {string}")
+    @When("I perform GET for the publication number {string}")
     public void iGetARecipeByPerformingGETOperationForTheRecipeNumber(String arg0) {
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
@@ -29,7 +29,7 @@ public class GetRecipeStepdefs {
                 .build();
         _request = request;
     }
-    @Then("I should see the recipe name as {string}")
+    @Then("I should see the publication name as {string}")
     public void iShouldSeeTheRecipeNameAs(String arg0) throws IOException, InterruptedException {
         HttpResponse<String> response = _client.send(_request, HttpResponse.BodyHandlers.ofString());
         assertNotNull(response);
