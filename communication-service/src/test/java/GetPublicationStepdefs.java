@@ -15,13 +15,13 @@ public class GetPublicationStepdefs {
     HttpClient _client;
     HttpRequest _request;
     @Given("I perform GET operation for {string}")
-    public void iSetGETRecipeServiceApiEndpoint() {
+    public void iSetGETPublicationServiceApiEndpoint() {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;
     }
 
     @When("I perform GET for the publication number {string}")
-    public void iGetARecipeByPerformingGETOperationForTheRecipeNumber(String arg0) {
+    public void iGetAPublicationByPerformingGETOperationForThePublicationNumber(String arg0) {
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
                 .header("accept", "application/json")
@@ -30,7 +30,7 @@ public class GetPublicationStepdefs {
         _request = request;
     }
     @Then("I should see the publication name as {string}")
-    public void iShouldSeeTheRecipeNameAs(String arg0) throws IOException, InterruptedException {
+    public void iShouldSeeThePublicationNameAs(String arg0) throws IOException, InterruptedException {
         HttpResponse<String> response = _client.send(_request, HttpResponse.BodyHandlers.ofString());
         assertNotNull(response);
 

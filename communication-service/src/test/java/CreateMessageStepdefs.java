@@ -18,13 +18,13 @@ public class CreateMessageStepdefs {
     String _api ;
 
     @Given("I perform POST operation for {string}")
-    public void iSetPOSTMenuServiceApiFor(String arg0) {
+    public void iSetPOSTMessageServiceApiFor(String arg0) {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;
         _api = arg0;
     }
 
-    @When("I perform POST publication")
+    @When("I perform POST message")
     public void iPerformPOSTMenu()
     {
         HttpRequest request = HttpRequest.newBuilder()
@@ -35,7 +35,7 @@ public class CreateMessageStepdefs {
         _request = request;
     }
 
-    @Then("I get a {int} status from the publication service")
+    @Then("I get a {int} status from the message service")
     public void iGetAStatusFromMenuService(int arg0) throws IOException, InterruptedException {
         HttpResponse<String> response = _client.send(_request, HttpResponse.BodyHandlers.ofString());
         assertNotNull(response);

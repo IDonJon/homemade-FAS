@@ -19,7 +19,7 @@ public class GetAllPublicationsStepdefs {
     String _api ;
 
     @Given("I perform GET operation for the {string}")
-    public void iGetAllMenusWithGETOperationForThe(String arg0) {
+    public void iGetAllPublicationWithGETOperationForThe(String arg0) {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;
         _api = arg0;
@@ -27,7 +27,7 @@ public class GetAllPublicationsStepdefs {
 
 
     @When("I perform GET all publications")
-    public void iPerformGETAllMenus() {
+    public void iPerformGETAllPublication() {
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
                 .header("accept", "application/json")
@@ -37,7 +37,7 @@ public class GetAllPublicationsStepdefs {
     }
 
     @Then("I get {string} publications as a result")
-    public void iGetMenusAsAResult(String arg0) throws IOException, InterruptedException {
+    public void iGetPublicationsAsAResult(String arg0) throws IOException, InterruptedException {
         HttpResponse<String> response = _client.send(_request, HttpResponse.BodyHandlers.ofString());
         assertNotNull(response);
     }
