@@ -18,13 +18,12 @@ public class GetAllPublicationsStepdefs {
     HttpRequest _request;
     String _api ;
 
-    @Given("I perform GET operation for the {string}")
-    public void iGetAllPublicationWithGETOperationForThe(String arg0) {
+    @Given("I get all publications with GET operation for the {string}")
+    public void iGetAllPublicationsWithGETOperationForThe(String arg0) {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;
         _api = arg0;
     }
-
 
     @When("I perform GET all publications")
     public void iPerformGETAllPublication() {
@@ -41,6 +40,7 @@ public class GetAllPublicationsStepdefs {
         HttpResponse<String> response = _client.send(_request, HttpResponse.BodyHandlers.ofString());
         assertNotNull(response);
     }
+
 
 
 }

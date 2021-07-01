@@ -14,11 +14,13 @@ public class GetPublicationStepdefs {
     String POSTS_API_URL = "https://jsonplaceholder.typicode.com/posts";
     HttpClient _client;
     HttpRequest _request;
-    @Given("I perform GET operation for {string}")
+
+    @Given("I set GET publication service api endpoint")
     public void iSetGETPublicationServiceApiEndpoint() {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;
     }
+
 
     @When("I perform GET for the publication number {string}")
     public void iGetAPublicationByPerformingGETOperationForThePublicationNumber(String arg0) {
@@ -35,4 +37,6 @@ public class GetPublicationStepdefs {
         assertNotNull(response);
 
     }
+
+
 }
