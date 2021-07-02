@@ -17,8 +17,8 @@ public class CreateChefAccountStepdefs {
     HttpRequest _request;
     String _api ;
 
-    @Given("I perform POST operation for {string}")
-    public void iSetPOSTChefServiceApiFor(String arg0) {
+    @Given("I set up the creation of a new chef with POST operation for {string}")
+    public void iSetUpTheCreationOfANewChefWithPOSTOperationFor(String arg0) {
         HttpClient client = HttpClient.newHttpClient();
         _client = client;
         _api = arg0;

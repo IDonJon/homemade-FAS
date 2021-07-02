@@ -11,7 +11,7 @@ import java.net.http.HttpResponse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class GetRecipeStepdefs {
-    String POSTS_API_URL = "https://jsonplaceholder.typicode.com/posts";
+    String POSTS_API_URL = "https://homemade-evo.herokuapp.com/api";
     HttpClient _client;
     HttpRequest _request;
     @Given("I set GET recipe service api endpoint")
